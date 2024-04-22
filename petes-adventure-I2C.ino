@@ -1,6 +1,6 @@
 #include <LiquidCrystal_I2C.h>
 
-byte mario[8] = {
+byte pete[8] = {
   B01110,
   B01110,
   B00100,
@@ -88,7 +88,7 @@ void setup() {
   lcd.begin(16,2);
   lcd.init();
   lcd.backlight();
-  lcd.createChar(0, mario);
+  lcd.createChar(0, pete);
   lcd.createChar(1, spike);
   lcd.createChar(2, box);
   lcd.createChar(3, shot);
@@ -103,16 +103,16 @@ void loop() {
   //Scene 0
   if(screen == 0){
     lcd.setCursor(3,0);
-    lcd.write("PETE'S");
+    lcd.print("PETE'S");
     delay(1000);
     lcd.setCursor(5,1);
-    lcd.write("ADVENTURE");
+    lcd.print("ADVENTURE");
     delay(1500);
 
     lcd.clear();
 
     lcd.setCursor(3,1);
-    lcd.write("the I2C thing");
+    lcd.print("the I2C thing");
     delay(250);
   }
   lcd.clear();
@@ -128,69 +128,69 @@ void loop() {
   lcd.setCursor(10,1);
   lcd.write(2);
 
-  //Mario walks up to the spike
+  //Pete walks up to the spike
   for(int i = 0; i < 6; i++){
     lcd.setCursor(i,1);
     lcd.write(byte(0));
     delay(400);
     lcd.setCursor(i,1);
-    lcd.write(" ");
+    lcd.print(" ");
   }
 
-  //Mario jumps
+  //Pete jumps
   lcd.setCursor(6,0);
   lcd.write(byte(0));
   delay(400);
   lcd.setCursor(6,0);
-  lcd.write(" ");
+  lcd.print(" ");
 
   lcd.setCursor(7,1);
   lcd.write(byte(0));
   delay(400);
   lcd.setCursor(7,1);
-  lcd.write(" ");
+  lcd.print(" ");
 
 
-  //Mario walks one more step
+  //Pete walks one more step
   lcd.setCursor(8,1);
   lcd.write(byte(0));
   delay(400);
   lcd.setCursor(8,1);
-  lcd.write(" ");
+  lcd.print(" ");
 
 
-  //Mario jumps on the box and down
+  //Pete jumps on the box and down
   lcd.setCursor(9,0);
   lcd.write(byte(0));
   delay(400);
   lcd.setCursor(9,0);
-  lcd.write(" ");
+  lcd.print(" ");
 
   lcd.setCursor(10,0);
   lcd.write(byte(0));
   delay(400);
   lcd.setCursor(10,0);
-  lcd.write(" ");
+  lcd.print(" ");
 
   lcd.setCursor(11,0);
   lcd.write(byte(0));
   delay(400);
   lcd.setCursor(11,0);
-  lcd.write(" ");
+  lcd.print(" ");
 
   lcd.setCursor(12,1);
   lcd.write(byte(0));
   delay(400);
   lcd.setCursor(12,1);
-  lcd.write(" ");
+  lcd.print(" ");
 
-  //Mario walks out of the screen
+  //Pete walks out of the screen
   for(int i = 12; i < 17; i++){
     lcd.setCursor(i,1);
     lcd.write(byte(0));
     delay(400);
     lcd.setCursor(i,1);
-    lcd.write(" ");
+    lcd.print(" ");
   }
   lcd.clear();
   }
@@ -204,21 +204,21 @@ void loop() {
    lcd.setCursor(3,1);
    lcd.write(2);
 
-  //Mario walks to the box
+  //Pete walks to the box
   for(int i = 0; i < 2; i++){
     lcd.setCursor(i,1);
     lcd.write(byte(0));
     delay(400);
     lcd.setCursor(i,1);
-    lcd.write(" ");
+    lcd.print(" ");
   }
 
-  //Mario jumps on the box and down
+  //Pete jumps on the box and down
   lcd.setCursor(2,0);
   lcd.write(byte(0));
   delay(400);
   lcd.setCursor(2,0);
-  lcd.write(" ");
+  lcd.print(" ");
 
   lcd.setCursor(3,0);
   lcd.write(byte(0));
@@ -230,56 +230,56 @@ void loop() {
     lcd.write(byte(4));
     delay(400);
     lcd.setCursor(i,1);
-    lcd.write(" ");
+    lcd.print(" ");
   }
   lcd.setCursor(10,1);
   lcd.write(byte(4));
   delay(1000);
 
   lcd.setCursor(3,0);
-  lcd.write(" ");
+  lcd.print(" ");
 
   lcd.setCursor(4,0);
   lcd.write(byte(0));
   delay(400);
   lcd.setCursor(4,0);
-  lcd.write(" ");
+  lcd.print(" ");
 
-  //Mario walks to the enemy
+  //Pete walks to the enemy
   for(int i = 5; i < 9; i++){
     lcd.setCursor(i,1);
     lcd.write(byte(0));
     delay(400);
     lcd.setCursor(i,1);
-    lcd.write(" ");
+    lcd.print(" ");
   }
 
-  //Mario jumps on the enemy
+  //Pete jumps on the enemy
   lcd.setCursor(9,0);
   lcd.write(byte(0));
   delay(400);
   lcd.setCursor(9,0);
-  lcd.write(" ");
+  lcd.print(" ");
 
   lcd.setCursor(10,0);
   lcd.write(byte(0));
   delay(400);
   lcd.setCursor(10,0);
-  lcd.write(" ");
+  lcd.print(" ");
 
   lcd.setCursor(10,1);
   lcd.write(byte(0));
   delay(400);
   lcd.setCursor(10,1);
-  lcd.write(" ");
+  lcd.print(" ");
 
-  //Mario walks out of the screen
+  //Pete walks out of the screen
   for(int i = 10; i < 17; i++){
     lcd.setCursor(i,1);
     lcd.write(byte(0));
     delay(400);
     lcd.setCursor(i,1);
-    lcd.write(" ");
+    lcd.print(" ");
   }
   lcd.clear();
   }
@@ -294,63 +294,63 @@ void loop() {
   lcd.setCursor(9,0);
   lcd.write(2);
 
-  //Mario walks to the spike
+  //Pete walks to the spike
    for(int i = 0; i < 3; i++){
     lcd.setCursor(i,1);
     lcd.write(byte(0));
     delay(400);
     lcd.setCursor(i,1);
-    lcd.write(" ");
+    lcd.print(" ");
   }
-  //Mario jumps
+  //Pete jumps
   lcd.setCursor(3,0);
   lcd.write(byte(0));
   delay(400);
   lcd.setCursor(3,0);
-  lcd.write(" ");
+  lcd.print(" ");
 
   lcd.setCursor(4,1);
   lcd.write(byte(0));
   delay(400);
   lcd.setCursor(4,1);
-  lcd.write(" ");
+  lcd.print(" ");
 
-  //Mario walks to the wall
+  //Pete walks to the wall
   for(int i = 4; i < 7; i++){
     lcd.setCursor(i,1);
     lcd.write(byte(0));
     delay(400);
     lcd.setCursor(i,1);
-    lcd.write(" ");
+    lcd.print(" ");
   }
   lcd.setCursor(7,1);
   lcd.write(byte(0));
   delay(2700);
 
-  //Mario shoots
+  //Pete shoots
   lcd.setCursor(8,1);
   lcd.write(byte(3));
   delay(400);
   lcd.setCursor(8,1);
-  lcd.write(" ");
+  lcd.print(" ");
   delay(400);
 
   //Wall breaks
   lcd.setCursor(9,0);
-  lcd.write(" ");
+  lcd.print(" ");
   lcd.setCursor(9,1);
   lcd.write(byte(6));
   lcd.setCursor(10,1);
   lcd.write(byte(6));
   delay(2000);
 
-  //Mario walks out of the screen
+  //Pete walks out of the screen
   for(int i = 7; i < 17; i++){
     lcd.setCursor(i,1);
     lcd.write(byte(0));
     delay(400);
     lcd.setCursor(i,1);
-    lcd.write(" ");
+    lcd.print(" ");
   }
   lcd.clear();
   }
@@ -365,7 +365,7 @@ void loop() {
     lcd.write(byte(0));
     delay(400);
     lcd.setCursor(i,1);
-    lcd.write(" ");
+    lcd.print(" ");
   }
   lcd.setCursor(4,1);
   lcd.write(byte(0));
@@ -377,7 +377,7 @@ void loop() {
     lcd.write(byte(5));
     delay(400);
     lcd.setCursor(i,0);
-    lcd.write(" ");
+    lcd.print(" ");
   }
   lcd.setCursor(12,0);
   lcd.write(byte(5));
@@ -399,18 +399,18 @@ void loop() {
   lcd.write(byte(1));
   delay(400);
   lcd.setCursor(0,0);
-  lcd.write(" ");
+  lcd.print(" ");
   lcd.setCursor(1,0);
-  lcd.write(" ");
+  lcd.print(" ");
   lcd.setCursor(2,0);
-  lcd.write(" ");
+  lcd.print(" ");
 
   lcd.setCursor(15,0);
-  lcd.write(" ");
+  lcd.print(" ");
   lcd.setCursor(14,0);
-  lcd.write(" ");
+  lcd.print(" ");
   lcd.setCursor(13,0);
-  lcd.write(" ");
+  lcd.print(" ");
 
   lcd.setCursor(0,1);
   lcd.write(byte(1));
@@ -429,17 +429,17 @@ void loop() {
 
   //Boss talks
   lcd.setCursor(0,0);
-  lcd.write("I WILL END U");
+  lcd.print("I WILL END U");
   delay(1500);
 
   //clear the text
   for(int i = 0; i < 12; i++){
   lcd.setCursor(i,0);
-  lcd.write(" ");
+  lcd.print(" ");
   }
   //Boss goes down one
   lcd.setCursor(12,0);
-  lcd.write(" ");
+  lcd.print(" ");
   lcd.setCursor(12,1);
   lcd.write(byte(5));
   delay(500);
@@ -450,7 +450,7 @@ void loop() {
     lcd.write(byte(3));
     delay(300);
     lcd.setCursor(i,1);
-    lcd.write(" ");
+    lcd.print(" ");
   }
   delay(100);
   //Pete jumps over the bullet
@@ -458,26 +458,26 @@ void loop() {
   lcd.write(byte(0));
 
   lcd.setCursor(4,1);
-  lcd.write(" ");
+  lcd.print(" ");
 
   //Bullet passes under Pete
   lcd.setCursor(4,1);
   lcd.write(byte(3));
   delay(300);
   lcd.setCursor(4,1);
-  lcd.write(" ");
+  lcd.print(" ");
 
   lcd.setCursor(3,1);
   lcd.write(byte(3));
   delay(300);
   lcd.setCursor(3,1);
-  lcd.write(" ");
+  lcd.print(" ");
   delay(100);
   //Pete lands
   lcd.setCursor(4,1);
   lcd.write(byte(0));
   lcd.setCursor(4,0);
-  lcd.write(" ");
+  lcd.print(" ");
 
   delay(1000);
 
@@ -485,7 +485,7 @@ void loop() {
   lcd.setCursor(12,0);
   lcd.write(byte(5));
   lcd.setCursor(12,1);
-  lcd.write(" ");
+  lcd.print(" ");
 
   delay(700);
 
@@ -495,32 +495,32 @@ void loop() {
     lcd.write(byte(1));
     delay(300);
     lcd.setCursor(i,1);
-    lcd.write(" ");
+    lcd.print(" ");
   }
   //Pete jumps
   lcd.setCursor(4,0);
   lcd.write(byte(0));
   lcd.setCursor(4,1);
-  lcd.write(" ");
+  lcd.print(" ");
 
   //Spikes move under Pete
   lcd.setCursor(4,1);
   lcd.write(byte(1));
   delay(300);
   lcd.setCursor(4,1);
-  lcd.write(" ");
+  lcd.print(" ");
 
   lcd.setCursor(3,1);
   lcd.write(byte(1));
   delay(300);
   lcd.setCursor(3,1);
-  lcd.write(" ");
+  lcd.print(" ");
 
   //Pete lands
   lcd.setCursor(4,1);
   lcd.write(byte(0));
   lcd.setCursor(4,0);
-  lcd.write(" ");
+  lcd.print(" ");
 
   delay(1000);
 
@@ -531,7 +531,7 @@ void loop() {
     lcd.write(byte(5));
     delay(400);
     lcd.setCursor(i,0);
-    lcd.write(" ");
+    lcd.print(" ");
   }
   //Boss flies above Pete
   for(int i = 0; i < 5; i++){
@@ -540,11 +540,11 @@ void loop() {
     delay(400);
     if(i == 4) break;
     lcd.setCursor(i,0);
-    lcd.write(" ");
+    lcd.print(" ");
   }
   //Pete moves to the right
     lcd.setCursor(4,1);
-    lcd.write(" ");
+    lcd.print(" ");
     lcd.setCursor(5,1);
     lcd.write(byte(0));
     delay(300);
@@ -553,13 +553,13 @@ void loop() {
   lcd.setCursor(4,1);
   lcd.write(byte(5));
   lcd.setCursor(4,0);
-  lcd.write(" ");
+  lcd.print(" ");
   delay(700);
   //Boss goes back up
   lcd.setCursor(4,0);
   lcd.write(byte(5));
   lcd.setCursor(4,1);
-  lcd.write(" ");
+  lcd.print(" ");
   delay(400);
 
   //Boss goes to the right of Pete
@@ -569,7 +569,7 @@ void loop() {
     delay(400);
     if(i == 8) break;
     lcd.setCursor(i,0);
-    lcd.write(" ");
+    lcd.print(" ");
   }
 
   //Pete shoots
@@ -577,20 +577,20 @@ void loop() {
   lcd.write(byte(3));
   delay(400);
   lcd.setCursor(6,1);
-  lcd.write(" ");
+  lcd.print(" ");
 
   lcd.setCursor(7,0);
   lcd.write(byte(7));
   delay(200);
   lcd.setCursor(7,0);
-  lcd.write(" ");
+  lcd.print(" ");
 
   //Boss dies
   lcd.setCursor(8,0);
   lcd.write(byte(6));
   delay(500);
   lcd.setCursor(8,0);
-  lcd.write(" ");
+  lcd.print(" ");
 
   //Rubbel falls down
   lcd.setCursor(8,1);
@@ -599,12 +599,12 @@ void loop() {
 
   //Pete wins
   lcd.setCursor(3,0);
-  lcd.write("PETE WINS!");
+  lcd.print("PETE WINS!");
 
   delay(1000);
   for(int i = 0; i < 17; i++){
     lcd.setCursor(i,1);
-    lcd.write(" ");
+    lcd.print(" ");
   }
   delay(3000);
   lcd.clear();
