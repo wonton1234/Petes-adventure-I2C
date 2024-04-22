@@ -565,7 +565,7 @@ void loop() {
 
   //Boss goes to the right of Pete
   for(int i = 4; i < 9; i++){
-    lcd.setCursor(i,0;
+    lcd.setCursor(i,0);
     lcd.printByte(byte(5));
     delay(400);
     if(i == 8) break;
