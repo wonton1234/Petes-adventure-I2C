@@ -112,7 +112,7 @@ void loop() {
     lcd.clear();
 
     lcd.setCursor(3,1);
-    lcd.write("The anime");
+    lcd.print("The anime");
     delay(250);
   }
   lcd.clear();
