@@ -81,7 +81,7 @@ byte shot2[8] = {
   B00000
 };
 
-// use 0x3E if it dosent work
+// use 0x3F if it dosent work
 LiquidCrystal_I2C lcd(0x27,16,2);
 
 void setup() {
@@ -98,7 +98,7 @@ void setup() {
   lcd.createChar(7, shot2);
 }
 
-void loop() { 
+void loop() {
   int screen = 0;
   //Scene 0
   if(screen == 0){
@@ -110,16 +110,16 @@ void loop() {
     delay(1500);
 
     lcd.clear();
-    
+
     lcd.setCursor(3,1);
     lcd.write("the anime");
     delay(250);
   }
   lcd.clear();
 
-  
 
-  
+
+
   //Scene 1 _________________________________________________________
   screen = 1;
   if(screen == 1){
@@ -136,14 +136,14 @@ void loop() {
     lcd.setCursor(i,1);
     lcd.write(" ");
   }
-  
+
   //Mario jumps
   lcd.setCursor(6,0);
   lcd.write(byte(0));
   delay(400);
   lcd.setCursor(6,0);
   lcd.write(" ");
-  
+
   lcd.setCursor(7,1);
   lcd.write(byte(0));
   delay(400);
@@ -165,7 +165,7 @@ void loop() {
   delay(400);
   lcd.setCursor(9,0);
   lcd.write(" ");
-  
+
   lcd.setCursor(10,0);
   lcd.write(byte(0));
   delay(400);
@@ -195,11 +195,11 @@ void loop() {
   lcd.clear();
   }
 
-  
+
   //NEW SCREEN _____________________________________________________
   screen = 2;
   if(screen == 2){
-   
+
   //Building the scene
    lcd.setCursor(3,1);
    lcd.write(2);
@@ -238,13 +238,13 @@ void loop() {
 
   lcd.setCursor(3,0);
   lcd.write(" ");
-  
+
   lcd.setCursor(4,0);
   lcd.write(byte(0));
   delay(400);
   lcd.setCursor(4,0);
   lcd.write(" ");
-   
+
   //Mario walks to the enemy
   for(int i = 5; i < 9; i++){
     lcd.setCursor(i,1);
@@ -253,7 +253,7 @@ void loop() {
     lcd.setCursor(i,1);
     lcd.write(" ");
   }
-  
+
   //Mario jumps on the enemy
   lcd.setCursor(9,0);
   lcd.write(byte(0));
@@ -266,7 +266,7 @@ void loop() {
   delay(400);
   lcd.setCursor(10,0);
   lcd.write(" ");
-  
+
   lcd.setCursor(10,1);
   lcd.write(byte(0));
   delay(400);
@@ -308,7 +308,7 @@ void loop() {
   delay(400);
   lcd.setCursor(3,0);
   lcd.write(" ");
-  
+
   lcd.setCursor(4,1);
   lcd.write(byte(0));
   delay(400);
@@ -334,7 +334,7 @@ void loop() {
   lcd.setCursor(8,1);
   lcd.write(" ");
   delay(400);
-  
+
   //Wall breaks
   lcd.setCursor(9,0);
   lcd.write(" ");
@@ -354,7 +354,7 @@ void loop() {
   }
   lcd.clear();
   }
-  
+
   //NEW SCREEN _________________________________________________________
   screen = 4;
   if(screen == 4){
@@ -411,7 +411,7 @@ void loop() {
   lcd.write(" ");
   lcd.setCursor(13,0);
   lcd.write(" ");
-  
+
   lcd.setCursor(0,1);
   lcd.write(byte(1));
   lcd.setCursor(1,1);
@@ -426,7 +426,7 @@ void loop() {
   lcd.setCursor(13,1);
   lcd.write(byte(1));
   delay(1000);
-  
+
   //Boss talks
   lcd.setCursor(0,0);
   lcd.write("I WILL END U");
@@ -443,7 +443,7 @@ void loop() {
   lcd.setCursor(12,1);
   lcd.write(byte(5));
   delay(500);
-  
+
   //Boss shoots
   for(int i = 11; i >= 5; i--){
     lcd.setCursor(i,1);
@@ -456,10 +456,10 @@ void loop() {
   //Pete jumps over the bullet
   lcd.setCursor(4,0);
   lcd.write(byte(0));
-  
+
   lcd.setCursor(4,1);
   lcd.write(" ");
- 
+
   //Bullet passes under Pete
   lcd.setCursor(4,1);
   lcd.write(byte(3));
@@ -486,7 +486,7 @@ void loop() {
   lcd.write(byte(5));
   lcd.setCursor(12,1);
   lcd.write(" ");
-  
+
   delay(700);
 
   //Spikes from the floor
@@ -524,7 +524,7 @@ void loop() {
 
   delay(1000);
 
-  
+
   //Boss goes out of screen
   for(int i = 12; i < 17; i++){
     lcd.setCursor(i,0);
@@ -561,7 +561,7 @@ void loop() {
   lcd.setCursor(4,1);
   lcd.write(" ");
   delay(400);
-  
+
   //Boss goes to the right of Pete
   for(int i = 4; i < 9; i++){
     lcd.setCursor(i,0);
@@ -578,7 +578,7 @@ void loop() {
   delay(400);
   lcd.setCursor(6,1);
   lcd.write(" ");
-  
+
   lcd.setCursor(7,0);
   lcd.write(byte(7));
   delay(200);
@@ -591,7 +591,7 @@ void loop() {
   delay(500);
   lcd.setCursor(8,0);
   lcd.write(" ");
-  
+
   //Rubbel falls down
   lcd.setCursor(8,1);
   lcd.write(byte(6));
