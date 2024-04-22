@@ -2,73 +2,73 @@
 #define printByte(args) write(args)
 
 byte pete[8] = {
-  B01110,
-  B01110,
   B00100,
   B01110,
-  B10101,
   B00100,
   B01010,
-  B10001
+  B10101,
+  B01110,
+  B01010,
+  B11011
 };
 byte spike[8] = {
   B00000,
   B00000,
-  B00000,
   B00100,
   B01110,
   B01110,
+  B11111,
   B11111,
   B11111
 };
 byte box[8] = {
   B11111,
-  B11111,
-  B11111,
-  B11111,
-  B11111,
-  B11111,
-  B11111,
+  B10101,
+  B10101,
+  B11011,
+  B11011,
+  B10101,
+  B10101,
   B11111
 };
 byte shot[8] = {
-  B00000,
-  B00000,
-  B00000,
-  B01000,
-  B11100,
-  B01000,
-  B00000,
-  B00000
+  B11111,
+  B11111,
+  B11111,
+  B11111,
+  B00100,
+  B00100,
+  B00100,
+  B00100
 };
 byte enemy[8] = {
-  B00000,
-  B00000,
-  B00000,
   B00100,
   B01110,
   B10101,
   B11111,
+  B10101,
+  B11011,
+  B11111,
   B01010
 };
 byte boss[8] = {
-  B10101,
-  B01110,
   B11111,
   B10101,
   B11111,
+  B01010,
+  B00100,
+  B10001,
   B11011,
-  B11111,
-  B00000
+  B11111
 };
 byte rubbel[8] = {
   B00000,
   B00000,
   B00000,
   B00000,
-  B00000,
   B00010,
-  B10011,
+  B01011,
+  B11111,
   B11111
 };
 byte shot2[8] = {
@@ -122,7 +122,7 @@ void loop() {
 
 
   //Scene 1 _________________________________________________________
-  screen = 1;
+  //screen = 1;
   if(screen == 1){
   lcd.setCursor(6,1);
   lcd.printByte(1);
@@ -198,7 +198,7 @@ void loop() {
 
 
   //NEW SCREEN _____________________________________________________
-  screen = 2;
+  //screen = 2;
   if(screen == 2){
 
   //Building the scene
@@ -285,7 +285,7 @@ void loop() {
   lcd.clear();
   }
   //NEW SCREEN _______________________________________________________
-  screen = 3;
+  //screen = 3;
   if(screen == 3){
   //Building the scene
   lcd.setCursor(3,1);
@@ -448,7 +448,7 @@ void loop() {
   //Boss shoots
   for(int i = 11; i >= 5; i--){
     lcd.setCursor(i,1);
-    lcd.printByte(byte(3));
+    lcd.printByte(byte(7));
     delay(300);
     lcd.setCursor(i,1);
     lcd.print(" ");
@@ -463,13 +463,13 @@ void loop() {
 
   //Bullet passes under Pete
   lcd.setCursor(4,1);
-  lcd.printByte(byte(3));
+  lcd.printByte(byte(7));
   delay(300);
   lcd.setCursor(4,1);
   lcd.print(" ");
 
   lcd.setCursor(3,1);
-  lcd.printByte(byte(3));
+  lcd.printByte(byte(7));
   delay(300);
   lcd.setCursor(3,1);
   lcd.print(" ");
@@ -581,7 +581,7 @@ void loop() {
   lcd.print(" ");
 
   lcd.setCursor(7,0);
-  lcd.printByte(byte(7));
+  lcd.printByte(byte(3));
   delay(200);
   lcd.setCursor(7,0);
   lcd.print(" ");
