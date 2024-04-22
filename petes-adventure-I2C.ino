@@ -81,6 +81,7 @@ byte shot2[8] = {
   B00000
 };
 
+// use 0x3E if it dosent work
 LiquidCrystal_I2C lcd(0x27,16,2);
 
 void setup() {
