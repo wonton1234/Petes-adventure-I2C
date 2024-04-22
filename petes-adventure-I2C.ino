@@ -112,7 +112,7 @@ void loop() {
     lcd.clear();
 
     lcd.setCursor(3,1);
-    lcd.print("the I2C thing");
+    lcd.write("The anime");
     delay(250);
   }
   lcd.clear();
