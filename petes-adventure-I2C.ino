@@ -72,14 +72,14 @@ byte rubbel[8] = {
   B11111
 };
 byte shot2[8] = {
-  B00010,
-  B00111,
-  B00010,
-  B00000,
-  B00000,
-  B00000,
-  B00000,
-  B00000
+  B01110,
+  B10101,
+  B11111,
+  B01110,
+  B01110,
+  B10101,
+  B11111,
+  B01110
 };
 
 // use 0x3F if it dosent work
@@ -122,7 +122,7 @@ void loop() {
 
 
   //Scene 1 _________________________________________________________
-  //screen = 1;
+  screen = 1;
   if(screen == 1){
   lcd.setCursor(6,1);
   lcd.printByte(1);
@@ -198,7 +198,7 @@ void loop() {
 
 
   //NEW SCREEN _____________________________________________________
-  //screen = 2;
+  screen = 2;
   if(screen == 2){
 
   //Building the scene
@@ -285,7 +285,7 @@ void loop() {
   lcd.clear();
   }
   //NEW SCREEN _______________________________________________________
-  //screen = 3;
+  screen = 3;
   if(screen == 3){
   //Building the scene
   lcd.setCursor(3,1);
